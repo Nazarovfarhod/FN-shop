@@ -21,6 +21,7 @@ const updateUI = (products) => {
     const heart = clone.querySelector("#heart");
     const addCart = clone.getElementById("add-cart");
     const cartNumber = document.getElementById("cart-number");
+    const cards = clone.getElementById("cards");
 
     let counter = 0;
 
@@ -51,6 +52,11 @@ const updateUI = (products) => {
       console.log(counter);
       cartNumber.textContent = counter;
     });
+
+    const bosish = () => {
+      a.click();
+    };
+    cards.addEventListener("click", bosish);
 
     ul.appendChild(clone);
   });
