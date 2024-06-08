@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body >
+    <!-- NAVBAR -->
+    <div class="w-full h-14 rounded-md bg-slate-50 flex items-center px-5 sticky top-0 z-10">
+      <a class="cursor-pointer mr-auto" href="#"
+        ><span class="text-2xl text-info font-serif">FN</span>
+        <span class="text-zinc-700">.Shop</span></a
+      >
+      <div id="box" class="mr-7"><i class="fa-solid fa-cart-shopping relative"><span id="cart-number" class="absolute text-[10px] -right-2">0</span></i></div>
+      <div class="mr-7"><i class="fa-regular fa-heart relative"></i><span id="heart-number" class="absolute text-[12px] ">0</span></i></div>
+      <form class="flex gap-2 items-center">
+        <label class="input input-bordered flex items-center gap-2">
+          <input type="text" name="input" class="grow" placeholder="Search" autocomplete="off" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="w-4 h-4 opacity-70"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          </label>
+        <button class="btn btn-info">Search</button>
+      </form>
+    </div>
+
+    <div class="container py-5 px-10 bg-slate-300 mx-auto">
+      <h1 class="text-center text-6xl font-semibold text-green-700 mb-28">
+        Products
+      </h1>
+      <ul class="w-full flex flex-wrap justify-center gap-16">
+        <template>
+          <li class="">
+            <div class="card w-96 glass">
+              <figure><img src="" alt="car!" /></figure>
+              <div class="card-body">
+                <h3 class="text-xl text-black">Title : Car</h3>
+                <div class="justify-center">
+                  <p class="text-xl"></p>
+                  <span class="text-yellow-500 text-2xl font-medium mr-5"></span>
+                  <i class="fa-solid fa-heart" id="heart"></i>
+                </div>
+                <div class="card-actions justify-end">
+                  <button id="add-cart" href="#" class="btn btn-info text-black">
+                    Add to Cart
+                  </button>
+                  <a href="#" class="btn btn-ghost">Read More...</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </template>
+      </ul>
+      <!-- overlay -->
+      <div
+        id="overlay"
+        class="absolute flex justify-center items-center top-0 left-0 blur-0 w-full bg-black bg-opacity-50 h-lvh backdrop-blur-sm hidden"
+      >
+        <span class="loading loading-spinner loading-lg text-white"></span>
+      </div>
+    </div>
+    <script src="./request.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
